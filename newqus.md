@@ -38,3 +38,36 @@ ans - db.books.updateMany({},{$set:{genre:"Fiction"}})
 ans - db.books.find({genre:"Fiction"})
 ## 10. Write a query to find documents in the "books" collection where the title starts with the letter "T".
 ans - db.books.find({ Title: /^T/ })
+
+## 11. Write an update query to increment the year by 1 for all documents in the "books" collection.
+ans - db.books.updateMany({},{$inc:{Year:1}})
+
+## 12. Write a query to find documents in the "books" collection where the year is between 1950 and 1970.
+ 
+ans - db.books.find{Year:{$gt:1950,$lt:1970}}
+
+## 13. Write a query to find documents in the "books" collection where the author's name contains the letter "a".
+ 
+ans - db.books.find({Author:/a/})
+
+## 14. Write an update query to remove the "genre" field from all documents in the "books" collection.
+  
+ans - db.books.updateMany({},{ $unset: {genre : ""} })
+## 15. Write a query to find documents in the "books" collection where the author's name ends with the letter "y".
+ans -  db.books.find({Author: /y$/ }) ....?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
